@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/appear.js"></script>
+  <script type="text/javascript" src="js/tendances.js"></script>
+  <script type="text/javascript" src="js/register.js"></script>
+  <script type="text/javascript" src="js/message.js"></script>
+  <script type="text/javascript" src="js/timeline.js"></script>
+  <script type="text/javascript" src="js/profil.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/query.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/modal.css">
+  <link rel="stylesheet" type="text/css" href="css/timeline.css">
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <title>aghioul</title>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">aghioul</a>
+    </div>
+        <form class="navbar-form navbar-right" method="post" id="loginform" action="">
+          <div class="form-group has-feedback">
+            <label for="username">nom d'utilisateur:</label>
+            <input type="text" class="form-control" id="username">
+          </div>
+          <div class="form-group has-feedback">
+            <label for="passwd">mot de passe:</label>
+            <input type="password" class="form-control" id="passwd">
+          </div>
+          <button type="submit" class="btn btn-primary">se connecter</button>
+        </form>
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="register.html"><span class="glyphicon glyphicon-user"></span>créer un compte</a></li>
+    </ul>
+  </div>
+</nav>
+  <div class="jumbotron text-center">
+    <img src="images/banner-2.jpg" alt="bannière à la con">
+  </div>
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="well"><h3><em>aghioul</em> est <em><strong>le</strong></em> réseau social du moment. aghioul vous permet de vous inventer une vie sociale, de montrer au grand jour votre stupidité,
+        d'espionner les gens et bien plus encore. Créez un compte gratuitement dès maintenant et ajoutez vos amis.</h3>
+      </div>
+      <div class="well">
+        <blockquote>
+          <p>
+            aghioul est la nouvelle pépite du web, il pousse le génie plus loin que facebook, twitter, instagram ou encore habbo.fr. C'est trop bien!
+          </p>
+          <footer>Picsou mag</footer>
+        </blockquote>
+        <blockquote>
+          <p>
+            ajouter @melodie_1998 pour des tutos et conseils makeup et santé ;) un coffret greenfit tea à gagner!!!!
+          </p>
+          <footer>melodie_1998</footer>
+        </blockquote>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="well text-center">
+        <h4>Créer un compte</h4>
+        <h5>c'est totalement gratuit, et ça le restera</h5>
+      </div>
+      <form class="form-horizontal" action="" method="post" id="registerform">
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="userName">nom d'utilisateur:</label>
+          <div class="col-sm-10">
+            <input type="text" class='form-control' name="userName" id="userName" value="">
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="firstName">prenom:</label>
+          <div class="col-sm-10">
+            <input type="text" class='form-control' name="firstName" id="firstname" value="">
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="lastName">nom:</label>
+          <div class="col-sm-10">
+            <input type="text" class='form-control' placeholder="nom" name="lastName" id="lastname" value="">
+          </div>
+        </div>
+         <div class="form-group has-feedback" id="sexe">
+          <label class="control-label col-sm-2" for="optradio">sexe:</label>
+          <div class="col-sm-10">
+            <label class="radio-inline"><input type="radio" name="sexe" value="M">M</label>
+      <label class="radio-inline"><input type="radio" name="sexe" value="F">F</label>
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="email">adresse mail:</label>
+          <div class="col-sm-10">
+            <input type="email" class='form-control' name="email" id='mail' value="">
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="passwd-1">mot de passe:</label>
+          <div class="col-sm-10">
+            <input type="password" class='form-control' name="passwd-1" id='passwd-1' value="">
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="passwd-2">entrez à nouveau votre mot de passe:</label>
+          <div class="col-sm-10">
+            <input type="password" class='form-control' name="passwd-2" id='passwd-2' value="">
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label><input type="checkbox">j'ai compris les conditions d'utilisation (inexistantes)</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary" name="button-submit" id="button-submit">suivant</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+    
+  </div>
+
+  <footer class="container-fluid text-center">
+    <p>aghioul 2018&reg; - tous droits réservés <a href="ismael.html">Ismael Bonneau</a> & <a href="karim.html">Karim Leffad</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>timeline</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+<body id="body">
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="" onclick="afficherTimeline(); return false;">Aghioul</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="" onclick="afficherTimeline(); return false;">accueil</a></li>
+        <li><a href="" onclick="return false;">mes amis</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group input-group">
+          <input type="text" class="form-control" placeholder="rechercher.." id="query">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" id="query-button" onclick="aghioulquery()">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="" onclick="afficherprofil(this); return false" id="monprofil"><span class="glyphicon glyphicon-user"></span> Mon profil</a></li>
+        <li id="logout"><a href="" onclick="return logout(this)"><span class="glyphicon glyphicon-log-out"></span>  se déconnecter</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="aghioulpanel leftpanel-profil">
+        <img src="images/001-boy.png" class="img-thumbnail" height="100" width="100" alt="Avatar" id="profile-pic">
+        <p><a class="username" id="user-username" href="">isbonneau</a></p>
+        <p><a class="name" id="user-name" href="">ismael Bonneau</a></p>
+        <p>abonnements  <span id="abonnements">4</span></p>
+        <p>abonnés  <span id="abonnes">2</span></p>
+      </div>
+      <div class="aghioulpanel mentions">
+        <p><img src="images/icons/sunglasses.png" style="width:60px"></p>
+        <h4>who's hot?</h4><h5>(and it's certainly not you)</h5>
+        <p id="mentions">
+        </p>
+      </div>
+      <div class="aghioulpanel hashtags">
+        <p><img src="images/icons/fire.png" style="width:60px"></p>
+        <h4>what's hot?</h4>
+        <p id="hashtags">
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-7">
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-default text-left">
+            <div class="panel-body">
+              <div class="form-group">
+                <label for="status">Mettez vous à l'aise:</label>
+                <textarea class="form-control" rows="5" id="status"></textarea>
+              </div>
+
+              <button type="button" class="btn btn-primary btn-sm" id="wesh" onclick="return publish(this)">
+                <span class="glyphicon glyphicon-edit"></span> wesh!
+              </button>
+              <!-- Trigger/Open The Modal -->
+              <button type="button" class="btn bouton-sondage btn-sm" id="sondage-button">creer un sondage</button>
+              <!-- The Modal -->
+              <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close-sondage">&times;</span>
+                    <p>Posez une question... </p>
+                    <form class="" action="" method="post" onsubmit="return publierSondage(this)">
+                      <div class="form-group">
+                        <textarea class="form-control" id="title-sondage" name="question" rows="4" placeholder="posez votre question..." cols="30"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="reponse 1..." id="reponse1">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="reponse 2..." id="reponse2">
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" type="submit" name="submit">
+                      </div>
+                    </form>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+		<div id="timeline">
+			
+		</div>
+
+    </div>
+    <div class="col-sm-2 rightpanel-ads">
+      <div id="suggestions">
+        
+      </div>
+      <div id="ads">
+        <div class="thumbnail">
+          <a href="https://www.kfc.fr/" target="_blank" >
+          <img src="images/pubs/pub_kfc.jpg" alt="KFC" width="600" height="450">
+          </a>
+        </div>
+        <div class="thumbnail">
+          <a href="https://www.mcdonalds.fr/" target="_blank">
+          <img src="images/pubs/pub_mcdo.jpg" alt="McDonalds" width="600" height="450">
+          </a>
+        </div>
+        <div class="thumbnail">
+          <a href="https://www.mcdonalds.fr/" target="_blank">
+          <img src="images/pubs/pub_mcdo.jpg" alt="McDonalds" width="600" height="450">
+          </a>
+        </div>
+        <div class="thumbnail">
+          <a href="https://www.burgerking.fr/" target="_blank">
+          <img src="images/pubs/pub_bk.jpg" alt="Burger king" width="600" height="450">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer id="lol" class="container-fluid text-center footer">
+  <p>aghioul 2018&reg; - tous droits réservés</p>
+</footer>
+
+</body>
+</html>

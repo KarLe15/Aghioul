@@ -1,0 +1,110 @@
+/*merci à http://blog.teamtreehouse.com/use-meter-progress-elements pour styliser les balises meter*/
+
+.jumbotron{
+    background-color: #3399cc;
+    color: #ecf0f1;
+}
+.rewesh-p{
+  	font-style: italic;
+}
+    
+blockquote p{
+  	font-size: medium;
+}
+
+.comment blockquote{
+  	font-size: small;
+  	text-align: left;
+    display: inline;
+}
+  	
+.comment {
+    display: flex;
+}
+    
+.textarea-comment{
+    margin: 15px;
+}
+
+.expire-date{
+	margin-top: 10px;
+	font-size: smaller;
+	text-align: right;
+	font-style: italic;
+}
+
+.sondage-titre{
+	font-style: normal;
+	font-size: 1.2em;
+}
+
+.sondage-question{
+	font-style: normal;
+	font-size: 1em;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.sondage-compte{
+	margin-right: 10px;
+	font-size: large;
+}
+
+.bouton-sondage{
+	background-color: #95a5a6;
+	color: white;
+}
+
+.bouton-option1{
+	background-color: #27ae60;
+	color: white;
+}
+
+.bouton-option2{
+	background-color: #2980b9;
+	color: white;
+}
+
+
+meter{
+	margin-right: 30px; 
+}
+
+/*pour chrome et safari*/
+meter::-webkit-meter-bar {
+    background: #EEE;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
+    border-radius: 3px;
+}
+
+meter::-webkit-meter-optimum-value {
+    background: #2980b9;
+    border-radius: 3px;
+}
+
+meter::-webkit-meter-suboptimum-value {
+    background: #2980b9;
+    border-radius: 3px;
+}
+
+meter::-webkit-meter-even-less-good-value {
+    background: #2980b9;
+    border-radius: 3px;
+}
+
+meter::-moz-meter-bar {
+    border-radius: 3px;
+}
+
+/*pour firefox*/
+meter:-moz-meter-optimum::-moz-meter-bar {
+    background: #2980b9;
+}
+
+meter:-moz-meter-sub-optimum::-moz-meter-bar {
+    background: #2980b9;
+}
+
+meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+    background: #2980b9;
+}

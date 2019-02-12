@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <title>profil</title>
+  </head>
+  <body>
+    <!-- la navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="" onclick='afficherTimeline(); return false;'>Aghioul</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="" onclick='afficherTimeline(); return false;'>accueil</a></li>
+            <li><a href="" onclick='return false'>mes amis</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group input-group">
+              <input type="text" class="form-control" placeholder="rechercher.." id="query">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" id="query-button" onclick="aghioulquery()">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+            </div>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href=""><span class="glyphicon glyphicon-user"></span> Mon profil</a></li>
+            <li><a href=""><span class="glyphicon glyphicon-log-out"></span>  se déconnecter</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container text-center">
+      <div class="row">
+
+       <div class="col-sm-3">
+        <div class="aghioulpanel leftpanel-profil">
+          <img src="images/001-boy.png" class="img-thumbnail" height="100" width="100" alt="Avatar" id="user-pic">
+          <p><a class="username" id="user-username" href=""></a></p>
+          <p><a class="name" id="user-name" href=""></a></p>
+          <p>abonnements  <span id="abonnements"></span></p>
+          <p>abonnés  <span id="abonnes"></span></p>
+        </div>
+        <div class="aghioulpanel mentions">
+          <p><img src="images/icons/sunglasses.png" style="width:60px"></p>
+          <h4>who's hot?</h4><h5>(and it's certainly not you)</h5>
+          <p id="mentions">
+          </p>
+        </div>
+        <div class="aghioulpanel hashtags">
+          <p><img src="images/icons/fire.png" style="width:60px"></p>
+          <h4>what's hot?</h4>
+          <p id="hashtags">
+          </p>
+        </div>
+      </div>
+        <div class="col-sm-7">
+            <div class="well center-panel">
+              <img id="profile-pic" src="images/001-boy.png" class="img-thumbnail" height="100" width="100" alt="Avatar">
+              <p><a class="username" id="profil-username" href=""></a></p>
+              <p><a class="name" id="profil-name" href=""></a></p>
+              <span>abonnés  </span><span id="followers"></span>
+              <span>  abonnements  </span><span id="followings"></span>
+            </div>
+            <div id="panel-messages">
+             	
+       
+            </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="well rightpanel-ads">
+            <div class="thumbnail">
+              <img src="images/pubs/pub_kfc.jpg" alt="KFC" width="600" height="450">
+            </div>
+            <div class="thumbnail">
+              <img src="images/pubs/pub_mcdo.jpg" alt="McDonalds" width="600" height="450">
+            </div>
+            <div class="thumbnail">
+              <img src="images/pubs/pub_bk.jpg" alt="Burger KIng" width="600" height="450">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+      <p>aghioul 2018&reg; - tous droits réservés - Par Karim Leffad et l'autre là</p>
+    </footer>
+
+  </body>

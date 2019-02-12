@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/register.js"></script>
+    <title>aghioul - register</title>
+    <style>
+      .jumbotron{
+        background-color: #3399cc;
+        color: #ecf0f1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- la navbar -->
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">aghioul</a>
+      </div>
+          <form class="navbar-form navbar-right" id="loginform" method='post' action="">
+            <div class="form-group has-feedback">
+              <label for="username">nom d'utilisateur:</label>
+              <input type="text" class="form-control" id="username">
+            </div>
+            <div class="form-group has-feedback">
+              <label for="passwd">mot de passe:</label>
+              <input type="password" class="form-control" id="passwd">
+            </div>
+            <button type="submit" class="btn btn-primary">se connecter</button>
+          </form>
+    </div>
+  </nav>
+  <div class="jumbotron text-center">
+    <img src="images/banner-3.jpg" alt="bannière à la con">
+  </div>
+    <div class='container'>
+      <div class="well text-center">
+        <h4>Créer un compte</h4>
+        <h5>c'est totalement gratuit, et ça le restera</h5>
+      </div>
+      <form class="form-horizontal" action="" method="post" id="registerform">
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="userName">nom d'utilisateur:</label>
+          <div class="col-sm-10">
+            <input type="text" class='form-control' name="userName" id="userName" value="">
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="firstName">prenom:</label>
+          <div class="col-sm-10">
+            <input type="text" class='form-control' name="firstName" id="firstname" value="">
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="lastName">nom:</label>
+          <div class="col-sm-10">
+            <input type="text" class='form-control' name="lastName" id="lastname" value="">
+          </div>
+        </div>
+         <div class="form-group has-feedback" id="sexe">
+          <label class="control-label col-sm-2" for="optradio">sexe:</label>
+          <div class="col-sm-10">
+            <label class="radio-inline"><input type="radio" name="sexe" value="M">M</label>
+			<label class="radio-inline"><input type="radio" name="sexe" value="F">F</label>
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="email">adresse mail:</label>
+          <div class="col-sm-10">
+            <input type="email" class='form-control' name="email" id='mail' value="">
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="passwd-1">mot de passe:</label>
+          <div class="col-sm-10">
+            <input type="password" class='form-control' name="passwd-1" id='passwd-1' value="">
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <label class="control-label col-sm-2" for="passwd-2">entrez à nouveau votre mot de passe:</label>
+          <div class="col-sm-10">
+            <input type="password" class='form-control' name="passwd-2" id='passwd-2' value="">
+          </div>
+        </div>
+        <div class="form-group has-feedback">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label><input type="checkbox">j'ai compris les conditions d'utilisation (inexistantes)</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary" name="button-submit" id="button-submit">suivant</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <footer class="container-fluid text-center">
+      <p>aghioul 2018&reg; - tous droits réservés</p>
+    </footer>
+
+  </body>
+</html>

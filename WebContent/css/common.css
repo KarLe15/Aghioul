@@ -1,0 +1,61 @@
+.suggestion{
+	width: 250px;
+	background: #f2f2f2;
+	border-radius: 10px;
+	padding: 10px;
+	display: inline-block;
+	margin: 15px;
+	vertical-align: top;
+	text-align: center;
+}
+
+.aghioulpanel{
+  	width: 250px;
+	background: #f2f2f2;
+	border-radius: 10px;
+	padding: 10px;
+	display: inline-block;
+	margin: 15px;
+	vertical-align: top;
+	text-align: center;
+}
+
+.leftpanel-profil{
+	background: #f2f2f2;
+}
+
+.username{
+	font-size: large;
+	font-weight: bold;
+	color: black;
+}
+
+.name, #abonnements, #abonnes{
+	font-size: small;
+	font-weight: bold;
+	color: black;
+}
+
+.mentions {
+	background: #f2f2f2;
+}
+
+.hashtags{
+	background: #f2f2f2;
+}
+
+p .aghioullabel{
+	margin-bottom: 2px;
+}
+
+.aghioullabel{
+	max-width: 200px;
+	display: inline-block;
+	border-radius: 10px;
+	display: inline-block;
+	background-color: #a6a6a6;
+    color: white;
+    font-weight: bold;
+    padding: 3px;
+	font-size: 0.8em;
+}
